@@ -1,0 +1,26 @@
+<h1>Flats</h1>
+
+<div class="container">
+  <div class="row row-cols-3">
+    <% @flats.each do |flat| %>
+    <div class="card p-3 m-3" style="width: 18rem;">
+      <h3><%= flat.name %></h3>
+      <p><%= flat.address %></p>
+      <div class="row justify-content-around">
+        <div class="d-flex row">
+          <%= icon('fas', 'user-friends') %><p class="pl-3"><%= flat.number_of_guests %></p>
+        </div>
+
+        <div class="d-flex row">
+          <%= icon('fas', 'dollar-sign') %><p class="pl-3"><%= flat.price_per_night %></p>
+        </div>
+      
+      </div>
+    </div>
+    <% end %>
+
+  </div>
+
+</div>
+
+
